@@ -128,11 +128,11 @@
 
         function titleizeName(name) {
             // FIXME        //write logic to captalize name
-           var firstletter =  (name.slice(0, 1)).toUpperCase();
+            var firstletter =  (name.slice(0, 1)).toUpperCase();
            
-           var restOfName = (name.slice(1, name.length)).toLowerCase();
+            var restOfName = (name.slice(1, name.length)).toLowerCase();
            
-           var yourName = firstletter + restOfName;
+            var yourName = firstletter + restOfName;
             
             return yourName;
         }
@@ -140,15 +140,11 @@
         function calculateAge(date) {
             // FIXME            //Take the date value and calculate the age and then return the age
             date = new Date(date);
-            console.log(date);
             
             var today = new Date();
-            console.log(today);
+
             var yourAge = today-date; //age in miliseconds
             var yourAgeYears=Math.floor(((((yourAge/1000)/60)/60)/24)/365);
-
-            console.log(yourAge);
-            console.log(yourAgeYears);
             
             return yourAgeYears;
             
@@ -158,19 +154,17 @@
         function colorizeBorder(age, element) {
             // change the colour of the border as per instruction
             if (age <= 18) {
-                element.style.border = "8px solid #008000";
                             //logic to change color of border to GREEN
-            
-            
+                element.style.border = "8px solid #008000";
+
             } else if (age > 25) {
                             //logic to change color of border to RED
-                            element.style.border = "8px solid #FF0000";
+                element.style.border = "8px solid #FF0000";
             
             } else {
                             //logic to change color of border to ORIGINAL
-                            element.style.border = "8px solid #ccc";
-            
-            
+                element.style.border = "8px solid #ccc";
+    
             }
         }
 
@@ -206,8 +200,9 @@
                     colorizeBorder(ageByDate, avatar); // fixes up color
                 }
             });
-        })()
+        })();   //semicolon was missing
     </script>
+    <noscript>Your browser does not support JavaScript!</noscript>  <!--noscript tag was missing-->
 </body>
 
 </html>
